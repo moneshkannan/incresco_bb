@@ -15,7 +15,9 @@ dbconnect()
 app.use(morgan("dev"))
 // Allow requests from http://localhost:5173
 app.use(cors({
-    origin: 'http://localhost:5173'
+    // origin: 'http://localhost:5173'
+    origin: 'https://flourishing-crisp-412b35.netlify.app',
+    optionsSuccessStatus: 200 
 }));
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended: false}))
